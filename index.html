@@ -3,66 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SI LABACIN - LAPAS BATULICIN</title>
+    <title>Si Labacin - Sistem Informasi Lapas Batulicin</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <style>
-        body {
-            background-color: #001f3f; /* Warna biru gelap sesuai gambar */
+        body { background-color: #D3D3D3; }
+        .glass-card { background: #E1C16E; border: 1px solid #2d2d3a; }
+        .swiper { width: 100%; height: 250px; }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Perbaikan typo: object-fit bukan object-cover */
+            opacity: 0.6;
         }
+        /* Custom warna navigasi */
+        .swiper-button-next, .swiper-button-prev {
+            color: white !important;
+            transform: scale(0.6); /* Mengecilkan ukuran panah agar pas di mobile */
+        }
+        .swiper-pagination-bullet { background: white !important; }
     </style>
 </head>
-<body class="text-white font-sans flex flex-col items-center justify-center min-h-screen p-6">
+<body class="text-white font-sans antialiased">
 
-    <div class="max-w-md w-full text-center">
+    <div class="max-w-md mx-auto min-h-screen pb-10 shadow-2xl bg-[#D3D3D3]">
         
-        <div class="flex justify-center mb-6">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Coat_of_arms_of_the_Ministry_of_Law_and_Human_Rights_of_the_Republic_of_Indonesia.png/600px-Coat_of_arms_of_the_Ministry_of_Law_and_Human_Rights_of_the_Republic_of_Indonesia.png" 
-                 alt="Logo Kemenkumham" class="w-24 h-24 object-contain">
+        <div class="relative w-full overflow-hidden">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=800&q=80" alt="Slide 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Slide 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Slide 3">
+                    </div>
+                </div>
+                
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
 
-        <header class="mb-8">
-            <h2 class="text-lg font-bold uppercase tracking-wide leading-tight">
-                Kementerian Imigrasi dan Pemasyarakatan
-            </h2>
-            <h1 class="text-xl font-bold uppercase tracking-wider mt-1">
-                Lapas Kelas III Batulicin
-            </h1>
-        </header>
+        <div class="relative flex flex-col items-center -mt-16 px-6 z-10">
+            <div class="w-32 h-32 rounded-2xl border-4 border-[#0f0f13] overflow-hidden shadow-xl bg-blue-500">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=BangTutorial" alt="Profile" class="w-full h-full object-cover">
+            </div>
 
-        <div class="mb-4">
-            <h2 class="text-3xl font-black text-yellow-400 uppercase italic">
-                SI LABACIN
-            </h2>
-            <p class="text-lg font-semibold mt-2">
-                Sistem Informasi Lapas Batulicin
-            </p>
+            <div class="text-center mt-4">
+                <h1 class="text-black text-3xl font-bold tracking-tight">SI LABACIN</h1>
+                <p class="text-black text-m italic mt-3 leading-relaxed px-4">
+                    Sistem Informasi Lapas Batulicin
+                </p>
+                <div class="flex items-center justify-center text-gray-500 text-xs mt-2">
+                    <i class="fas fa-map-marker-alt mr-1"></i>
+                    <span>Desa Saring, Sungai Bubu, Tanah Bumbu, Indonesia</span>
+                </div>
+            </div>
+
+            <div class="flex space-x-4 mt-6">
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:scale-110 transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:scale-110 transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:scale-110 transition"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <hr class="w-full border-gray-800 my-8">
+
+            <div class="w-full space-y-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4LmhRDsoS5Yb8jXx8WlzTAVjO93eZA25cJ5ZK4zHpaNB7yQ/viewform" class="flex items-center justify-between glass-card p-4 rounded-xl hover:bg-[#252530] transition">
+                    <i class="fas fa-utility fa-semibold fa-link text-xl w-10 text-center"></i>
+                    <span class="flex-1 text-center font-medium">Layanan Kunjungan</span>
+                    <div class="w-10"></div>
+                </a>
+                <a href="#" class="flex items-center justify-between glass-card p-4 rounded-xl hover:bg-[#252530] transition">
+                    <i class="fas fas fa-utility fa-semibold fa-link text-xl w-10 text-center"></i>
+                    <span class="flex-1 text-center font-medium">Layanan Integrasi (PB, CB, DAN CMB)</span>
+                    <div class="w-10"></div>
+                </a>
+                <a href="#" class="flex items-center justify-between glass-card p-4 rounded-xl hover:bg-[#252530] transition">
+                    <i class="fas fas fa-utility fa-semibold fa-link text-xl w-10 text-center"></i>
+                    <span class="flex-1 text-center font-medium">Layanan Izin Luar Biasa</span>
+                    <div class="w-10"></div>
+                </a>
+                <a href="#" class="flex items-center justify-between glass-card p-4 rounded-xl hover:bg-[#252530] transition">
+                    <i class="fas fas fa-utility fa-semibold fa-link text-xl w-10 text-center"></i>
+                    <span class="flex-1 text-center font-medium">Layanan Informasi Dan Pengaduan</span>
+                    <div class="w-10"></div>
+                </a>
+            </div>
         </div>
-
-        <div class="space-y-4 mt-8">
-            
-            <a href="#" class="block w-full py-4 px-6 bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold rounded-xl transition duration-300 shadow-lg transform hover:scale-105">
-                Layanan Kunjungan
-            </a>
-
-            <a href="#" class="block w-full py-4 px-6 bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold rounded-xl transition duration-300 shadow-lg transform hover:scale-105">
-                Layanan Integrasi (PB, CB, DAN CMB)
-            </a>
-
-            <a href="#" class="block w-full py-4 px-6 bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold rounded-xl transition duration-300 shadow-lg transform hover:scale-105">
-                Layanan Pengaduan
-            </a>
-
-            <a href="#" class="block w-full py-4 px-6 bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold rounded-xl transition duration-300 shadow-lg transform hover:scale-105">
-                Informasi Layanan
-            </a>
-
-        </div>
-
-        <footer class="mt-12 text-gray-400 text-sm">
-            &copy; 2026 Lapas Kelas III Batulicin. All Rights Reserved.
-        </footer>
     </div>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false, // Slideshow tetap lanjut meski sudah diklik manual
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // Menambahkan fungsi tombol navigasi
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            effect: "slide", // Mengubah ke slide agar perpindahan manual lebih terasa "bergeser"
+        });
+    </script>
+</body>
 </html>
